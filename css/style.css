@@ -1,0 +1,15 @@
+ini css
+
+nav {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-item {
+    border: 1px solid;
+}
