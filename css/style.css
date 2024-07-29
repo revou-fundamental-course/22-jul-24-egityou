@@ -1,11 +1,10 @@
 ini css
 
-nav {
+.nav {
     border: 1px solid;
     display: flex;
     justify-content: space-between;
 }
-
 .nav-container {
     display: flex;
 }
