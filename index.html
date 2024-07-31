@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>document</title>
-        <link rel="stylesheet" href="css\style.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Our Package</a>
-                <a href="#">Call Us</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Yuor Trusted Travel Agent's</h1>
-            <p>Your happiness is our happiness</p>
-
-            <div class="contact-form">
-                <h2>Contact Us</h2>
-                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
-                <form>
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name">
-                    
-                    <label for="email">email Address:</label>
-                    <input type="email" id="email" name="email">
-
-                    <label for="interest">What are you interest in?</label>
-                    <select id="interest" name="interest">
-                        <option value="Travel">Travel</option>
-                        <option value="tour">Tour</option>
-                        <option value="both">Both</option>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="profile-img">
+            <img src="image/profil.png" alt="Profile Image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Package</a></li>
+                <li><a href="#">Call Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Travel Agent's</h1>
+        <div class="travel-info">
+            <div class="travel-img">
+                <img src="image/TRAVEL.png" alt="Travel Image">
+                <p>Liburan jadi menyenangkan bersama travel agentku</p>
+                <p id="orderInfo"></p>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="package">Package:</label>
+                    <select id="package" name="package">
+                        <option value="beach">Beach</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="city">City</option>
                     </select>
-                    <button type="submit">SEND</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
-
-            <blockquote>
-                "Liburan jadi menyenangkan bersama travel agentku."
-                <br> - Florence Hughes
-            </blockquote>
-        </main>
-
-        <script src="js/script.js"></script>
-    </body>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
 </html>
