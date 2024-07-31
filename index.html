@@ -7,32 +7,43 @@
         <link rel="stylesheet" href="css\style.css">
     </head>
     <body>
-        <nav class="nav" style="display: flex;
-    justify-content: space-between;">
-            <header>
-                <div>Ini Title</div>
-            </header>
-            <section class="nav-container">
-                <a class="nav-item">Home</a>
-                <a class="nav-item">Our Package</a>
-                <a class="nav-item">Call Us</a>
-            </section>
-        </nav>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Our Package</a>
+                <a href="#">Call Us</a>
+            </nav>
+        </header>
         <main>
-            <article>
-                <header>
-                    <h1></h1>
-                </header>
-                <p></p>
-            </article>
-            <section>
-                <article>
+            <h1>Yuor Trusted Travel Agent's</h1>
+            <p>Your happiness is our happiness</p>
 
-                </article>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
                 <form>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="email">email Address:</label>
+                    <input type="email" id="email" name="email">
 
+                    <label for="interest">What are you interest in?</label>
+                    <select id="interest" name="interest">
+                        <option value="Travel">Travel</option>
+                        <option value="tour">Tour</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <button type="submit">SEND</button>
                 </form>
-            </section>
+            </div>
+
+            <blockquote>
+                "Liburan jadi menyenangkan bersama travel agentku."
+                <br> - Florence Hughes
+            </blockquote>
         </main>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
