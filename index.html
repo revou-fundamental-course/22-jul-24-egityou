@@ -3,50 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agent</title>
+    <title>Travel With Us</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="profile-img">
-            <img src="image/profil.png" alt="Profile Image">
-        </div>
+        <h1>Travel With Us</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Package</a></li>
-                <li><a href="#">Call Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Travel Agent's</h1>
-        <div class="travel-info">
-            <div class="travel-img">
-                <img src="image/TRAVEL.png" alt="Travel Image">
-                <p>Liburan jadi menyenangkan bersama travel agentku</p>
-                <p id="orderInfo"></p>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Temukan Petualangan Anda Berikutnya</h2>
+        <p>Mulailah perjalanan seumur hidup dengan paket perjalanan eksklusif kami.</p>
+        <p>Bebaskan penjelajah dalam diri Anda. Bepergian ke lokasi eksotis dan ciptakan kenangan tak terlupakan. Baik Anda mencari petualangan, relaksasi, atau mendalami budaya, kami memiliki destinasi yang tepat untuk Anda.</p>
+        <div class="slideshow-container">
+            <!-- Slideshow Images -->
+            <div class="mySlides fade">
+                <img src="https://i0.wp.com/www.portonews.com/wp-content/uploads/2017/07/travelzoom.com_.jpg?fit=1600%2C900&ssl=1" style="width:100%">
+                <div class="text"><b>Bali</b></div>
             </div>
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <form id="contactForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <label for="package">Package:</label>
-                    <select id="package" name="package">
-                        <option value="beach">Beach</option>
-                        <option value="mountain">Mountain</option>
-                        <option value="city">City</option>
-                    </select>
-                    <button type="submit">Submit</button>
-                </form>
+            <div class="mySlides fade">
+                <img src="https://c4.wallpaperflare.com/wallpaper/132/818/377/eiffel-tower-cityscape-city-landmark-wallpaper-preview.jpg" style="width:100%">
+                <div class="text"><b>Paris</b></div>
+            </div>
+            <div class="mySlides fade">
+                <img src="https://o-cdn-cas.sirclocdn.com/parenting/images/wisata-jepang.width-800.format-webp.webp" style="width:100%">
+                <div class="text"><b>Tokyo</b></div>
+            </div>
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- Slideshow Dots -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <button onclick="showNotification()">Book Now</button>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>Destinasi Kami</h2>
+        <div class="destination-container">
+            <div class="destination">
+                <img src="https://www.rentalmobilbali.net/wp-content/uploads/2020/06/Waktu-Termurah-Liburan-Ke-Bali.jpg" alt="Bali">
+                <h3>Bali, Indonesia</h3>
+                <p class="price">Mulai dari $800</p>
+                <p>Temukan keindahan pantai, budaya yang kaya, dan resor mewah di Bali. Cocok untuk liburan santai dan petualangan.</p>
+            </div>
+            <div class="destination">
+                <img src="https://www.agoda.com/wp-content/uploads/2024/03/Featured-image-Eiffel-Tower-Paris-France-1244x700.jpg" alt="Paris">
+                <h3>Paris, Prancis</h3>
+                <p class="price">Mulai dari $1,200</p>
+                <p>Jelajahi menara Eiffel, museum Louvre, dan kafe-kafe romantis di Paris. Kota cinta yang ideal untuk bulan madu dan liburan.</p>
+            </div>
+            <div class="destination">
+                <img src="https://www.agoda.com/wp-content/uploads/2019/01/Things-to-do-in-Tokyo-Sensoji-Temple.jpg" alt="Tokyo">
+                <h3>Tokyo, Jepang</h3>
+                <p class="price">Mulai dari $1,000</p>
+                <p>Rasakan kombinasi unik antara tradisi dan teknologi modern di Tokyo. Nikmati kuliner Jepang dan budaya pop yang inovatif.</p>
+            </div>
+            <div class="destination">
+                <img src="https://akcdn.detik.net.id/visual/2018/12/03/a1c5d3da-04da-4350-9f0e-b7fa04493968_169.jpeg?w=650" alt="New York">
+                <h3>New York, AS</h3>
+                <p class="price">Mulai dari $1,500</p>
+                <p>Temukan kehidupan kota yang dinamis di New York. Dari Broadway hingga Central Park, ada sesuatu untuk semua orang di kota ini.</p>
+            </div>
+            <div class="destination">
+                <img src="https://wallpapers.com/images/featured/london-x9qjeypatfto90tj.jpg" alt="London">
+                <h3>London, Inggris</h3>
+                <p class="price">Mulai dari $1,400</p>
+                <p>Jelajahi landmark ikonik seperti Big Ben dan Buckingham Palace di London. Kota dengan sejarah yang mendalam dan budaya yang beragam.</p>
+            </div>
+            <div class="destination">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuGAgOQ9Un0XJH61myWXZVqd3I35z3HkP0Og&s" alt="Sydney">
+                <h3>Sydney, Australia</h3>
+                <p class="price">Mulai dari $1,200</p>
+                <p>Rasakan keindahan Sydney Opera House dan pantai Bondi. Kota yang menawarkan petualangan alam dan kehidupan kota yang energik.</p>
+            </div>
+            <div class="destination">
+                <img src="https://c4.wallpaperflare.com/wallpaper/117/225/212/antigua-arquitectura-coliseum-roma-wallpaper-preview.jpg" alt="Rome">
+                <h3>Roma, Italia</h3>
+                <p class="price">Mulai dari $1,000</p>
+                <p>Jelajahi situs bersejarah seperti Colosseum dan Vatikan di Roma. Kota yang kaya akan sejarah dan kuliner Italia yang lezat.</p>
+            </div>
+            <div class="destination">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIiCtw8ASWN-0Oi4t-8ntahVN2rnzfL0u5Q&amp;s" alt="Barcelona">
+                <h3>Barcelona, Spanyol</h3>
+                <p class="price">Mulai dari $1,100</p>
+                <p>Temukan arsitektur Gaudí dan pantai indah di Barcelona. Kota dengan budaya yang hidup dan makanan yang menggugah selera.</p>
+            </div>
+            <div class="destination">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kcIhtuRKUEKLK0tkWcmjq5ii2NLliHNZUA&s" alt="Cape Town">
+                <h3>Cape Town, Afrika Selatan</h3>
+                <p class="price">Mulai dari $900</p>
+                <p>Rasakan keindahan Table Mountain dan pantai-pantai menakjubkan di Cape Town. Destinasi ideal untuk petualangan alam dan relaksasi.</p>
+            </div>
+            <div class="destination">
+                <img src="https://asset-2.tstatic.net/travel/foto/bank/images/Hagia-Sophia-satu-tempat-wisata-terbaik-di-Turki-buat-libur-akhir-tahun.jpg" alt="Istanbul">
+                <h3>Istanbul, Turki</h3>
+                <p class="price">Mulai dari $950</p>
+                <p>Jelajahi perpaduan budaya Timur dan Barat di Istanbul. Kota yang menawarkan sejarah yang kaya dan pasar yang penuh warna.</p>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>
+            Selamat datang di <span class="highlight">Travel Go</span>, tempat di mana perjalanan Anda dimulai. Kami adalah tim profesional yang berkomitmen untuk memberikan pengalaman perjalanan terbaik kepada Anda. Dengan pengetahuan mendalam tentang destinasi dan layanan yang tak tertandingi, kami memastikan bahwa setiap perjalanan Anda penuh dengan kenangan indah dan pengalaman yang tak terlupakan.
+        </p>
+        <p>
+            Dari <span class="highlight">Liburan Tropis</span> hingga <span class="highlight">Petualangan Kota</span>, kami menawarkan berbagai pilihan yang sesuai dengan kebutuhan dan preferensi Anda. Bergabunglah dengan kami dan temukan dunia dengan cara yang baru dan menarik!
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                    
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini" required></textarea>
+                    
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><strong>Alamat:</strong> Jl. jendral No. 123, Jakarta, Indonesia</p>
+                <p><strong>Telepon:</strong> +62 123 456 789</p>
+                <p><strong>Email:</strong> TravelGo@gmail.com</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Travel With Us. All rights reserved.</p>
+        <p><a href="#privacy-policy">Privacy Policy</a></p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
